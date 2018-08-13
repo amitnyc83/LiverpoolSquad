@@ -1,8 +1,6 @@
 # YourGemName
+A CLI data gem that scrapes the https://www.premierleague.com/clubs/10/Liverpool/squad site and list all current players in the team. user can select from a player and see player stats.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/your_gem_name`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -20,9 +18,6 @@ Or install it yourself as:
 
     $ gem install your_gem_name
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 

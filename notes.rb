@@ -1,41 +1,26 @@
-A command line interface for premier league teams , starting with https://www.premierleague.com/clubs
+A command line interface for a premier league team , starting with https://www.premierleague.com/clubs/10/Liverpool/squad
 
-Puts “Welcome to Premier League Teams of the season ”
+Puts “ Welcome to Liverpool Football Club Premier League Team of the season”
 
 
-Show a list of teams in premier League
+Show a list of the current players in the Liverpool Squad
 
-1. Arsenal
-2. Liverpool
-3. Manchester United
-4. Man City
-5. Chelsea
+1. Adam Lallana
+2. Mo Salah
+3. Sadio Mane
+4. Roberto Firmino
+5. Jordan Henderson
 
-Puts “ Which team players nationality would you like to know more about? Enter a number from List”
+Puts “Select a number from the list above to know more about the player.”
 
 
 User types “1”
 
-Shows team profile site and goes directly to team player site
+Shows player stats by scraping site
 
 
 
-
-Which player does the user want to see the nationalityt? “Enter a number from the list”
-
-1. Peter Cech
-2. David Ospina
-3. Hector bellerin
-4. Laurent Koscielny
-5. Nacho Montreal
-
-Shows Player nationality
-
-Puts “ Peter Cech is from Czech Republic”
-
-Enter back to go back to team player site
-
-Enter Teams to back to Premier League Teams
+Type Exit to quit or type LIST to see squad again
 
 
 
@@ -46,21 +31,15 @@ Enter Teams to back to Premier League Teams
 
 
 
-(Save this file in notes in Gem)(create new file)
-(Create gem using bundle)
-(First file should be in bin) called PremierTeams
-
-Run file with ‘./bin/PremierTeams
-
-Chmod +x matches-today to get permission to run file with ./bin/PremierTeams’
 
 
-Use PremierLeagueTeams ::CLI.new.call (to initialize the method)
-
-Make a class PremierTeams :: (which has a CLI)
-
-Make a method a call method
-Puts “ Premier League Teams”
 
 
-Require ‘./lib/PremierTeams’
+
+Use LiverpoolSquad ::CLI.new.call (to initialize the method)
+
+Make a class LiverpoolSquad :: (which has a CLI)
+
+
+
+Require ‘./lib/Liverpool’
