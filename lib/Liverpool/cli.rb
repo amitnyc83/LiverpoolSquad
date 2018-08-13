@@ -42,12 +42,11 @@ end
         puts "Type Exit to quit or type LIST to see squad again"
         input =gets.strip
         if input == "list"
-          #@players = LiverpoolSquad::Player.squad
           @players.each.with_index(1) do |player, i|
             puts " #{i}. #{player.name}"
           end
       elsif input == "exit"
-        goodbye
+        goodbye 
       else
       puts "Invalid input.Please type Exit to quit or type LIST to see squad again "
     end
