@@ -28,7 +28,6 @@ class LiverpoolSquad::Player
     list_player.each do |player|
       new_player = self.new
       new_player.name = player.css("h4.name").text.strip
-      new_player.nationality = player.css("span.playerCountry").text.strip
       new_player.number = player.css("span.number").text.strip
       new_player.position = player.css("span.position").text.strip
       players << new_player
