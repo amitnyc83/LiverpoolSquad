@@ -4,7 +4,6 @@ class LiverpoolSquad::CLI
   def call
     list_players
     player_stats
-    goodbye
   end
 #list_players method starts by displaying a welcome message
 # a variable is created which equals to the player class and calls the squad method in the player class and returns the method
@@ -16,8 +15,8 @@ class LiverpoolSquad::CLI
    puts "---------------------------------------------------------------------"
    puts " Welcome to Liverpool Football Club Premier League Team of the season"
    puts "---------------------------------------------------------------------"
-  @players = LiverpoolSquad::Player.squad
-  @players.each.with_index(1) do |player, i|
+   LiverpoolSquad::Player.scrape_players
+   LiverpoolSquad::Player.all.each.with_index(1) do |player, i|
     puts " #{i}. #{player.name}"
   end
 end
@@ -28,8 +27,8 @@ end
       puts "Select a number from the list above to know more about the player."
       input = gets.strip.downcase
 
-      if input.to_i > 0
-        new_player = @players[input.to_i-1]
+      if input.to_i > 0 && input.to_i <= LiverpoolSquad::Player.all.length
+        new_player = LiverpoolSquad::Player.all[input.to_i-1]
         puts "---------------------------------------"
         puts "Name:             #{new_player.name}"
         puts "---------------------------------------"
@@ -39,14 +38,14 @@ end
         puts "---------------------------------------"
         puts "Type Exit to quit or type LIST to see squad again"
         input =gets.strip
-        if input == "list"
-          @players.each.with_index(1) do |player, i|
+        if input.downcase == "list"
+          LiverpoolSquad::Player.all.each.with_index(1) do |player, i|
             puts " #{i}. #{player.name}"
           end
-      elsif input == "exit"
+      elsif input.downcase == "exit"
         goodbye
       else
-      puts "Invalid input.Please type Exit to quit or type LIST to see squad again "
+      puts "Invalid input.Please type Exit to quit or type List to see squad again "
     end
   end
   end
