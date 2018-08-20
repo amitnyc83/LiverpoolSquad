@@ -4,6 +4,7 @@ class LiverpoolSquad::CLI
   def call
     list_players
     player_stats
+    goodbye
   end
 #list_players method starts by displaying a welcome message
 # a variable is created which equals to the player class and calls the squad method in the player class and returns the method
@@ -42,8 +43,9 @@ end
           LiverpoolSquad::Player.all.each.with_index(1) do |player, i|
             puts " #{i}. #{player.name}"
           end
-      elsif input.downcase == "exit"
+      elsif input.to_s.downcase == "exit"
         goodbye
+        exit
       else
       puts "Invalid input.Please type Exit to quit or type List to see squad again "
     end
